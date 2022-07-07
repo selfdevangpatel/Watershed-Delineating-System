@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="585.0" prefWidth="250.0">
+         <items>
+            <VBox fx:id="layerVBox" prefHeight="0.0" style="-fx-border-color: gray; -fx-border-width: 3; -fx-border-radius: 3;">
+               <children>
+                  <Label text=" Layer(s):">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children></VBox>
+            <fx:include source="toolbox.fxml" />
+         </items>
+      </SplitPane>
+   </left>
+   <center>
+      <StackPane fx:id="stackPane" prefHeight="585.0" prefWidth="1030.0" BorderPane.alignment="CENTER">
+         <children>
+            <ComboBox fx:id="basemapCB" promptText="--Set Basemap Style--" StackPane.alignment="TOP_LEFT" />
+            <ComboBox fx:id="setScaleCB" promptText="--Set Scale--" StackPane.alignment="TOP_RIGHT" />
+         </children>
+      </StackPane>
+   </center>
+   <top>
+      <VBox prefHeight="135.0" prefWidth="1280.0" style="-fx-border-color: lightgray; -fx-border-width: 0 0 1 0;" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem fx:id="exitMI" mnemonicParsing="false" text="Exit" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Layer">
+                  <items>
+                    <MenuItem fx:id="addRasterMI" mnemonicParsing="false" text="Add raster layer" />
+                        <MenuItem fx:id="addVectorMI" mnemonicParsing="false" text="Add vector layer" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <HBox spacing="10.0">
+               <children>
+                  <fx:include source="sketch_box.fxml" />
+                  <fx:include source="renderer_box.fxml" />
+                  <fx:include source="search_box.fxml" />
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <Label fx:id="welcomeUserLB">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets right="10.0" top="65.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

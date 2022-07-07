@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="55.0" layoutY="100.0" text="Slope Type :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="slopeTypeCB" layoutX="145.0" layoutY="98.0" />
+      <Label layoutX="50.0" layoutY="150.0" text="Color Ramp :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="colorRampCB" layoutX="145.0" layoutY="148.0" />
+      <Label layoutX="72.0" layoutY="200.0" text="Azimuth :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="74.0" layoutY="250.0" text="Altitude :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Slider fx:id="azimuthSL" blockIncrement="1.0" layoutX="145.0" layoutY="204.0" majorTickUnit="10.0" max="360.0" minorTickCount="0" prefHeight="38.0" prefWidth="300.0" showTickLabels="true" showTickMarks="true" value="100.0" />
+      <Slider fx:id="altitudeSL" blockIncrement="1.0" layoutX="145.0" layoutY="252.0" majorTickUnit="10.0" max="90.0" minorTickCount="0" prefHeight="38.0" prefWidth="300.0" showTickLabels="true" showTickMarks="true" value="30.0" />
+      <Label layoutX="86.0" layoutY="50.0" text="Raster :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="rasSelCB" layoutX="145.0" layoutY="48.0" />
+      <Button fx:id="applyBtn" layoutX="145.0" layoutY="325.0" mnemonicParsing="false" text="Apply" />
+   </children>
+</AnchorPane>

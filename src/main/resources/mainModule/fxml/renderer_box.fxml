@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainModule.RendererBoxController">
+   <children>
+      <GridPane prefHeight="80.0" prefWidth="138.0" style="-fx-border-color: gray; -fx-border-radius: 3; -fx-border-width: 3;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="blendBtn" mnemonicParsing="false">
+               <tooltip>
+                  <Tooltip text="Blend renderer" />
+               </tooltip></Button>
+            <Button fx:id="hillshadeBtn" mnemonicParsing="false" GridPane.rowIndex="1">
+               <tooltip>
+                  <Tooltip text="Hillshade renderer" />
+               </tooltip></Button>
+            <Button fx:id="rgbBtn" mnemonicParsing="false" GridPane.columnIndex="1">
+               <tooltip>
+                  <Tooltip text="RGB renderer" />
+               </tooltip></Button>
+            <Button fx:id="colorMapBtn" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <tooltip>
+                  <Tooltip text="Color map renderer" />
+               </tooltip></Button>
+            <Button fx:id="stretchBtn" mnemonicParsing="false" GridPane.columnIndex="2">
+               <tooltip>
+                  <Tooltip text="Stretch renderer" />
+               </tooltip></Button>
+            <Button fx:id="vectorBtn" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <tooltip>
+                  <Tooltip text="Vector renderer" />
+               </tooltip>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="3.0" />
+         </padding>
+      </GridPane>
+      <Label text=" Renderer Box">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+   <padding>
+      <Insets left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

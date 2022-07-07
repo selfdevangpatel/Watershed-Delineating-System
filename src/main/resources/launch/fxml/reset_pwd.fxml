@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="launch.RPController">
+   <children>
+      <Label layoutX="50.0" layoutY="50.0" text="Reset password">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="100.0" text="Username                :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="200.0" text="New password        :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="unameTF" layoutX="220.0" layoutY="100.0" prefHeight="28.0" prefWidth="187.0" />
+      <Button fx:id="sendOTPBtn" layoutX="50.0" layoutY="140.0" mnemonicParsing="false" onAction="#sendOTP" text="Send OTP to E-mail">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="backBtn" layoutX="50.0" layoutY="330.0" mnemonicParsing="false" onAction="#switchToLogin" text="Back">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="resetPwdBtn" disable="true" layoutX="152.0" layoutY="330.0" mnemonicParsing="false" onAction="#resetPassword" text="Reset">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="unameInvalidLB" layoutX="220.0" layoutY="145.0" text="Invalid username!" textFill="RED" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="240.0" text="Confirm password  :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="280.0" text="OTP                        :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="otpTF" disable="true" layoutX="220.0" layoutY="280.0" prefHeight="28.0" prefWidth="187.0" />
+      <Label fx:id="pwdInvalidLB" layoutX="415.0" layoutY="205.0" text="Invalid!" textFill="RED" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="pwdUnmatchLB" layoutX="415.0" layoutY="245.0" text="Does not matches!" textFill="RED" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="wrongOTPLB" layoutX="415.0" layoutY="285.0" text="Wrong OTP!" textFill="RED" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="rpSuccessLB" layoutX="220.0" layoutY="335.0" text="Reset password successfull!" textFill="#009e00" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="otpSuccessLB" layoutX="220.0" layoutY="145.0" text="OTP sent successfull!" textFill="#009e00" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="confirmPwdPF" layoutX="220.0" layoutY="242.0" prefHeight="28.0" prefWidth="187.0" />
+      <PasswordField fx:id="newPwdPF" layoutX="220.0" layoutY="202.0" prefHeight="28.0" prefWidth="187.0" />
+      <ProgressIndicator fx:id="otpPI" layoutX="220.0" layoutY="142.0" prefHeight="25.0" prefWidth="25.0" visible="false" />
+      <Label fx:id="otpFailedLB" layoutX="220.0" layoutY="145.0" text="Something went wrong!" textFill="RED" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

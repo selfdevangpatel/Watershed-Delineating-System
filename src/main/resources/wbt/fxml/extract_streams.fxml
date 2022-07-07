@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="50.0" layoutY="50.0" text="Input raster D8 flow accumulation file :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="inRasCB" layoutX="317.0" layoutY="48.0" promptText="-- Select --" />
+      <Label layoutX="205.0" layoutY="85.0" text="-- OR --" />
+      <TextField fx:id="inRasTF" layoutX="205.0" layoutY="115.0" prefWidth="250.0" promptText="Location" />
+      <Button fx:id="inRasBtn" layoutX="470.0" layoutY="115.0" mnemonicParsing="false" text="..." />
+      <Label layoutX="73.0" layoutY="160.0" text="Output raster file :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="outRasTF" layoutX="205.0" layoutY="158.0" prefWidth="250.0" promptText="Location" />
+      <Button fx:id="outRasBtn" layoutX="470.0" layoutY="158.0" mnemonicParsing="false" text="..." />
+      <Button fx:id="applyBtn" layoutX="204.0" layoutY="410.0" mnemonicParsing="false" text="Apply" />
+      <ProgressIndicator fx:id="progressInd" layoutX="265.0" layoutY="410.0" prefHeight="25.0" prefWidth="25.0" visible="false" />
+      <Label fx:id="finishedLB" layoutX="265.0" layoutY="413.0" text="Finished!" textFill="#00c800" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="unsuccessfulLB" layoutX="265.0" layoutY="413.0" text="Something went wrong! Please try again." textFill="RED" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="addToMapCBX" layoutX="205.0" layoutY="380.0" mnemonicParsing="false" text="Add to map when finished" />
+      <Label layoutX="205.0" layoutY="235.0" text="Threshold in flow accumulation values for channelization:" />
+      <Spinner fx:id="thresholdSP" editable="true" layoutX="205.0" layoutY="260.0" />
+      <CheckBox fx:id="zeroBackCBX" layoutX="205.0" layoutY="315.0" mnemonicParsing="false" text="Use zero for background value" />
+   </children>
+</AnchorPane>

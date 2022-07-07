@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="50.0" layoutY="50.0" text="Import CSV file :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="inCsvTF" layoutX="50.0" layoutY="85.0" prefWidth="400.0" promptText="Location" />
+      <Button fx:id="inCsvBtn" layoutX="165.0" layoutY="48.0" mnemonicParsing="false" text="..." />
+      <Label layoutX="50.0" layoutY="140.0" text="Output vector file :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="outVecTF" layoutX="48.0" layoutY="175.0" prefWidth="400.0" promptText="Location" />
+      <Button fx:id="outVecBtn" layoutX="182.0" layoutY="138.0" mnemonicParsing="false" text="..." />
+      <Button fx:id="applyBtn" layoutX="50.0" layoutY="384.0" mnemonicParsing="false" text="Apply" />
+      <ProgressIndicator fx:id="progressInd" layoutX="110.0" layoutY="384.0" prefHeight="25.0" prefWidth="25.0" visible="false" />
+      <Label fx:id="finishedLB" layoutX="112.0" layoutY="386.0" text="Finished!" textFill="#00c800" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="unsuccessfulLB" layoutX="112.0" layoutY="386.0" text="Something went wrong! Please try again." textFill="RED" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="228.0" text="X field number :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Spinner layoutX="165.0" layoutY="226.0" prefWidth="100.0" fx:id="xfieldSP" />
+      <Label layoutX="278.0" layoutY="228.0" text="(e.g. 0 for first column/field)">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="270.0" text="Y field number :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="yfieldSP" layoutX="165.0" layoutY="268.0" prefWidth="100.0" />
+      <Label layoutX="278.0" layoutY="270.0" text="(e.g. 1 for second column/field)">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="318.0" text="EPSG projection :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="epsgProjTF" layoutX="172.0" layoutY="317.0" prefWidth="92.0" />
+      <Label layoutX="278.0" layoutY="318.0" text="(e.g. 4326, 2958 or None)">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

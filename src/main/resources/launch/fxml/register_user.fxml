@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="350.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="launch.URController">
+   <children>
+      <Label layoutX="50.0" layoutY="50.0" text="User registration">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="100.0" text="Username               :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="140.0" text="Password                :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="unameTF" layoutX="220.0" layoutY="102.0" prefHeight="28.0" prefWidth="187.0" />
+      <Button fx:id="backBtn" layoutX="50.0" layoutY="275.0" mnemonicParsing="false" onAction="#switchToLogin" text="Back">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="50.0" layoutY="180.0" text="Confirm password  :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="220.0" text="E-mail                     :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="emailTF" layoutX="220.0" layoutY="222.0" prefHeight="28.0" prefWidth="187.0" />
+      <PasswordField fx:id="confirmPwdPF" layoutX="220.0" layoutY="182.0" prefHeight="28.0" prefWidth="187.0" />
+      <PasswordField fx:id="pwdPF" layoutX="220.0" layoutY="142.0" prefHeight="28.0" prefWidth="187.0" />
+      <Label fx:id="unameExistsLB" layoutX="420.0" layoutY="105.0" text="Username exists!" textFill="RED" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="pwdInvalidLB" layoutX="420.0" layoutY="145.0" text="Invalid password!" textFill="RED" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="pwdUnmatchLB" layoutX="420.0" layoutY="187.0" text="Does not matches!" textFill="RED" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="emailTakenLB" layoutX="420.0" layoutY="225.0" text="E-mail already taken!" textFill="RED" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="URSuccessLB" layoutX="220.0" layoutY="280.0" text="User registered successfully!" textFill="#009e00" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="unameInvalidLB" layoutX="420.0" layoutY="105.0" text="Invalid username!" textFill="RED" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="emailInvalidLB" layoutX="420.0" layoutY="225.0" text="Invalid E-mail!" textFill="RED" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="144.0" layoutY="275.0" mnemonicParsing="false" onAction="#registerUser" text="Submit">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

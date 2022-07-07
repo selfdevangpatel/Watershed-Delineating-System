@@ -1,0 +1,1 @@
+This is a sample markdown file added to have an effect of non-empty directory for GitHub.
